@@ -3,7 +3,7 @@ import './Landing.css';
 
 function Landing() {
     return (
-        <section>
+        <section className="landing-section">
             <div className="hero-text">
                 <h1>
                     Be confidently<br/>

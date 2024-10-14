@@ -1,4 +1,4 @@
-section {
+.landing-section {
     display: grid;
     grid-template-columns: 0.9fr 1fr;
     margin-inline: 3%;
@@ -51,7 +51,7 @@ span {
 } 
 
 @media only screen and (max-width: 1100px) {
-    section {
+    .landing-section {
         margin-top: 0;
         margin-inline: 0;
         background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/landing.jpg');
@@ -68,7 +68,7 @@ span {
         gap: 0;
     }
     .hero-text h1 {
-        font-size: 3em;
+        font-size: 2.5em;
         color: white;
         text-align: center;
     }

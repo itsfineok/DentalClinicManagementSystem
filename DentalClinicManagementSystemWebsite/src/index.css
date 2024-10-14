@@ -75,12 +75,16 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* END OF CSS RESET */
 
+/* Thing I'm tired of implementing again and again */
 
 button {
     border: none;
     color: white;
+    cursor: pointer;
 }
-/* TEMPPPPPPP */
+
+
+/* Temporary Stuff */
 
 body {
   background: var(--blue-d4);

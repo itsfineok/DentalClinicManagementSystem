@@ -1,0 +1,92 @@
+.faq-section {
+    background: linear-gradient(180deg, #FFFFFF 0%, #EEF7FF 100%);
+    padding-block: 40px;
+}
+
+
+.faq-section > div{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+
+.faq-section > div > h2{
+    color: var(--blue-46);
+}
+
+.faq-items-container {
+    margin-inline: 3%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    row-gap: 40px;
+}
+
+.faq-item-wrapper {
+    width: 400px;
+    margin-inline: 2em;
+}
+
+.faq-item-wrapper h3{
+    margin-block: 0.5em;
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
+.faq-item-wrapper p{
+    color: #A7ADAF;
+    font-size: 1em;
+}
+
+.question-form {
+    display: flex;
+    gap: 4em;
+    background: var(--blue-80);
+    color: #53686A;
+    margin-inline: 3%;
+    padding-block: 30px;
+}
+
+.question-form h3 {
+    font-size: 14px;
+}
+
+.question-form p {
+    font-size: 13px;
+}
+
+.question-form textarea{
+    width: 30%;
+    resize: none;
+}
+
+.question-form button {
+    background: #5981AC;
+}
+
+@media only screen and (max-width: 1095px){
+    .question-form {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 1em;
+        margin-inline: 0;
+    }
+
+    .question-form h3, .question-form p {
+        text-align: center;
+        margin-inline: 3%;
+    }
+
+    .question-form textarea{
+        font-size: 14px;
+        width: 80%;
+        height: 100px;
+    }
+
+    .question-form button {
+        padding: 10px;
+    }
+}
