@@ -1,10 +1,12 @@
 import './Footer.css';
+import mailIcon from '../assets/icon-mail.png';
+import phoneIcon from '../assets/icon-phone.png';
 
 function Footer() {
     return (
         <footer>
             <div className="footer-link-container">
-                <div className="column">
+                <div>
                     <p>Patient Information</p>
                     <ul>
                         <li>About Us</li>
@@ -12,7 +14,7 @@ function Footer() {
                         <li>Customer Feedbacks</li>
                     </ul>
                 </div>
-                <div className="column">
+                <div>
                     <p>Services</p>
                     <ul>
                         <li>Service 1</li>
@@ -22,7 +24,7 @@ function Footer() {
                         <li>Service 5</li>
                     </ul>
                 </div>
-                <div className="column">
+                <div>
                     <p>Legal</p>
                     <ul>
                         <li>Privacy Policy</li>
@@ -31,16 +33,16 @@ function Footer() {
                     </ul>
                 </div>
 
-                <div className="column">
+                <address>
                     <p>Contact Us</p>
                     <ul>
                         <li>100 Sample Street <br />
                             2nd Floor <br />
                             Sample City, 10001</li>
-                        <li>123456789</li>
-                        <li>info@sample.com</li>
+                        <li className="icon-with-text"><img src={phoneIcon} alt="Telephone"/>123456789</li>
+                        <li className="icon-with-text"><img src={mailIcon} alt="Mail"/>info@sample.com</li>
                     </ul>
-                </div>
+                </address>
             </div>
         </footer>);
 }

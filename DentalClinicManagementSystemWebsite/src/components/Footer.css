@@ -33,6 +33,21 @@ footer ul li {
     color: var(--gray);
 }
 
+footer .icon-with-text {
+    display: flex;
+    align-items: center;
+}
+
+footer img {
+    display: inline !important;
+    height: 18px;
+    margin-right: 1em;
+}
+
+address li:first-child {
+    margin-bottom: 1em;
+}
+
 @media only screen and (max-width: 760px) {
     .footer-link-container {
         display: grid;
