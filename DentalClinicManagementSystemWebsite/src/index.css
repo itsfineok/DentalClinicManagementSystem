@@ -1,5 +1,6 @@
 :root {
   /* Variable name for shades of blue used, from light to dark */
+  --blue-d4: #D4E6FE;
   --blue-a7: #A7CEFD;
   --blue-93: #93BAE8;
   --blue-80: #80A7D4;
@@ -75,10 +76,13 @@ p, h1, h2, h3, h4, h5, h6 {
 /* END OF CSS RESET */
 
 
+button {
+    border: none;
+    color: white;
+}
 /* TEMPPPPPPP */
 
 body {
-  height: 100vh;
-  background: linear-gradient(180deg, var(--blue-a7), white);
+  background: var(--blue-d4);
 
 }

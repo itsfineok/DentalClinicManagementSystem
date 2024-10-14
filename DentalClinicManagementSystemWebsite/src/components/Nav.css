@@ -33,8 +33,6 @@ nav ul li {
 
 .get-started-button {
     background-color: var(--blue-59);
-    border: none;
-    color: white;
     padding-block: 10px;
     padding-inline: 10px;    
 }
