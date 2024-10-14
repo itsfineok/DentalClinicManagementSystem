@@ -12,7 +12,7 @@ header {
     line-height: 1em;
 }
 
-img {
+.icon {
     height: 64px;
     margin-right: 1em;
 }
@@ -31,7 +31,7 @@ li {
     white-space: nowrap;
 }
 
-button {
+.get-started-button {
     background-color: var(--blue-59);
     border: none;
     color: white;
@@ -39,9 +39,14 @@ button {
     padding-inline: 10px;    
 }
 
+.hamburger-menu {
+    display: none;
+    visibility: hidden;
+}
+
 @media only screen and (max-width: 700px) {
     header {
-        justify-content: flex-start;
+        justify-content: space-between;
     }
     
     ul {
@@ -50,5 +55,18 @@ button {
 
     button {
         display: none;
+    }
+
+    .hamburger-menu {
+        height: 32px;   
+        display: block;
+        visibility: visible;
+        border: none;
+        background: none;
+    }
+
+    .hamburger-menu img {
+        height: 32px;
+        color: var(--blue-59);
     }
   }
