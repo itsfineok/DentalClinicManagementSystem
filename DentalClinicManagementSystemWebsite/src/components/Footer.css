@@ -1,0 +1,43 @@
+:root {
+    --dark-gray: #282828;
+    --gray: #A7ADAF;
+}
+
+footer {
+    background-color: var(--dark-gray);
+}
+
+.footer-link-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-inline: 10%;
+    padding-block: 40px;
+}
+
+.footer-link-container div{
+    flex: 1;
+}
+
+.footer-link-container p {
+    color: white;
+    margin-bottom: 1em;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    color: var(--gray);
+}
+
+@media only screen and (max-width: 760px) {
+    .footer-link-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10%;
+    }
+}
