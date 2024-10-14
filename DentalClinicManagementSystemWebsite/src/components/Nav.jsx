@@ -1,10 +1,10 @@
-import myImage from '/logo.png';
+import myImage from '/icon.png';
 import './Nav.css';
 
 function Nav(){
     return (
     <header>
-        <div class="logo">
+        <div className="logo">
             <img src={myImage} alt="M.E. Herrera Logo"/>
             <h3>M.E. <br/>HERRERA</h3>
         </div>
@@ -17,7 +17,6 @@ function Nav(){
                 <li><button>GET STARTED</button></li>
             </ul>
         </nav>
-
     </header>);
 }
 
