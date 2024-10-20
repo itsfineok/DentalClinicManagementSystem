@@ -1,0 +1,18 @@
+#about-us, #services, #reviews {
+    height: 60vh;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    color: var(--blue-46);
+}
+
+
+
+#about-us, #reviews {
+    background:  linear-gradient( 180deg, var(--blue-d4) 0%, white 100%);
+}
+
+#services {
+    background:  linear-gradient( 180deg, white 0%, var(--blue-d4) 100%);
+
+}

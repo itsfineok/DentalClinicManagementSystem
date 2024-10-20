@@ -1,9 +1,14 @@
-
 import './Landing.css';
+import {useNavigate} from 'react-router-dom';
 
 function Landing() {
+const navigate = useNavigate(); // useNavigate hook
+
+const handleBookingClick = () => {
+    navigate('/book'); // Programmatically navigate to /book
+ };
     return (
-        <section className="landing-section">
+        <section id="landing-section">
             <div className="hero-text">
                 <h1>
                     Be confidently<br/>
@@ -11,7 +16,7 @@ function Landing() {
                     a <span>smile</span>.
                 </h1>
 
-                <button>Book Now!</button>
+                <button onClick={handleBookingClick}>Book Now!</button>
             </div>
             <div className="parent">
                 <div className="child"></div>

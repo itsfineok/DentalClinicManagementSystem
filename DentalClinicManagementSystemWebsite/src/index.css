@@ -16,6 +16,8 @@ html {
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: 400;
+
+  scroll-behavior: smooth;
 }
 
 /* CSS Reset from https://www.joshwcomeau.com/css/custom-css-reset/ */
@@ -78,9 +80,14 @@ p, h1, h2, h3, h4, h5, h6 {
 /* Thing I'm tired of implementing again and again */
 
 button {
-    border: none;
-    color: white;
-    cursor: pointer;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+a {
+  color: black;
+  text-decoration: none;
 }
 
 

@@ -1,0 +1,39 @@
+main {
+    background-color: white;
+    margin-inline: 10%;
+    padding: 40px;
+    margin-block: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#appointmentForm input[type="text"],#appointmentForm textarea,#appointmentForm input[type="email"]{
+    width: 100%;
+    font-size: 14px;
+    padding: 0.5em;
+
+}
+
+.booking-name  {
+    display: flex;
+}
+
+.booking-name label{
+    display: block;
+}
+
+label[for="surname"]{
+    visibility: hidden;
+}
+
+#additionalMessage {
+    resize: none;
+}
+
+.input-container label{
+    display: block;
+    margin-top: 20px;
+}
+

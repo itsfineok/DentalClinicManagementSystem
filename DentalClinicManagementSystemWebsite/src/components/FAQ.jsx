@@ -35,9 +35,9 @@ const faqData = [
 
 function FAQ() {
     return (
-        <section className="faq-section">
+        <section id="faq-section">
             <div>
-                <h2>FAQS</h2>
+                <h2>FAQs</h2>
             </div>
             <div className="faq-items-container">
             {faqData.map((faq, index) => (

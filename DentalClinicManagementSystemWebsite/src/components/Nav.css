@@ -1,4 +1,6 @@
 header {
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10,6 +12,8 @@ header {
     display: flex;
     align-items: center;
     line-height: 1em;
+    filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.2));
+    cursor: pointer;
 }
 
 .icon {
@@ -29,7 +33,10 @@ nav ul li {
     flex: 1;
     font-size: 15px;
     white-space: nowrap;
+    filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.2));
+    cursor: pointer;
 }
+
 
 .get-started-button {
     background-color: var(--blue-59);
@@ -40,6 +47,7 @@ nav ul li {
 .hamburger-menu {
     display: none;
     visibility: hidden;
+    filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.2));
 }
 
 @media only screen and (max-width: 730px) {

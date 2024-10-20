@@ -1,22 +1,22 @@
-import { useState } from 'react';
 import './App.css';
-import Nav from './components/Nav.jsx';
-import Footer from './components/Footer.jsx';
-import Landing from './components/Landing.jsx'
-import FAQ from './components/FAQ.jsx';
+import {BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home.jsx';
+import Booking from './pages/Booking.jsx'
+import Login from './pages/Login.jsx';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <Nav/>
-      <Landing/>
-      <FAQ/>
-      <Footer/>
-
-    </>
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route index path="/" element = {<Home/>}/>
+          <Route path="/book" element = {<Booking/>}/>
+          <Route path="/login" element = {<Login/>}></Route>
+        </Routes>
+      </BrowserRouter>
+    </div>
   )
 }
 
-export default App
+export default App;
