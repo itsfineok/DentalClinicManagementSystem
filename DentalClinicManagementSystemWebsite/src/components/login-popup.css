@@ -1,0 +1,41 @@
+.popup-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    background: var(--blue-93);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.popup {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.popup p {
+    margin-bottom: 2em
+}
+
+.popup button{
+    margin-inline: 1em;
+    padding-block: 0.5em;
+    padding-inline: 1em;
+    cursor: pointer;
+}
+
+.booking-yes{
+    background: var(--blue-46);
+}
+
+.booking-no {
+    background: var(--blue-6c);
+}

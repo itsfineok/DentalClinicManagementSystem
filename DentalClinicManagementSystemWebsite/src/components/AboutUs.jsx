@@ -1,4 +1,4 @@
-import './UnfinishedSection.css';
+import './Background.css';
 
 function AboutUs() {
     return (

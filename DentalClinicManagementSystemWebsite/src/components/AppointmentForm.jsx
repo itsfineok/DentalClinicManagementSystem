@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import { useState, useEffect} from "react";
 import './AppointmentForm.css'
+import Cookies from 'js-cookie';
 
 function AppointmentForm() {
     const [formData, setFormData] = useState({
@@ -14,6 +15,20 @@ function AppointmentForm() {
         appointmentTime: "123123",
         additionalMessage: ""
     });
+
+    useEffect(() => {
+        // Retrieve cookies and set form data if cookies exist
+        const firstName = Cookies.get('firstName');
+        const surname = Cookies.get('surname');
+        const email = Cookies.get('email');
+        const phone = Cookies.get('phone');
+
+        if (firstName) setFormData(prev => ({ ...prev, firstName }));
+        if (surname) setFormData(prev => ({ ...prev, surname }));
+        if (email) setFormData(prev => ({ ...prev, email }));
+        if (phone) setFormData(prev => ({ ...prev, phone }));
+    }, []);
+
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -47,25 +62,21 @@ function AppointmentForm() {
         }
     };
 
-
     return (
         <main>
             <h2>APPOINTMENT APPLICATION FORM</h2>
             <form id="appointmentForm" onSubmit={handleSubmit}>
                 <div className="booking-name">
-                    <div>
                         <label htmlFor="firstName">Patient Name*</label>
-                        <input type="text" id="firstName" name="firstName" value={formData.firstName} onChange={handleChange} placeholder="First Name" required />
-                    </div>
-                    <div>
                         <label htmlFor="surname">Surname</label>
+                        <input type="text" id="firstName" name="firstName" value={formData.firstName} onChange={handleChange} placeholder="First Name" required />
+                        
                         <input type="text" id="surname" name="surname" value={formData.surname} onChange={handleChange} placeholder="Surname" required />
-                    </div>
                 </div>
 
-                <div>
+                <div className="visited-before-section">
                     <label>Have you visited before?</label>
-                    <div>
+                    <div className="radio-button">
                         <input type="radio" id="visitedYes" name="hasVisitedBefore" value="1" checked={formData.hasVisitedBefore === "1"} onChange={handleChange} />
                         <label htmlFor="visitedYes">Yes</label>
                         <input type="radio" id="visitedNo" name="hasVisitedBefore" value="0" checked={formData.hasVisitedBefore === "0"} onChange={handleChange} />
@@ -81,13 +92,11 @@ function AppointmentForm() {
                     <option value="4">Dr. Elona</option>
                     <option value="5">Dr. Madarang</option>
                 </select>
-                <div className="input-container">
+                <div className="input-container appointment-datetime">
                     <label htmlFor="date">Appointment Date:</label>
-                    <input type="date" id="date" name="appointmentDate" value={formData.date} onChange={handleChange} required />
-                </div>
-                <div className="input-container">
                     <label htmlFor="time">Appointment Time:</label>
-                <   input type="time" id="time" name="appointmentTime" value={formData.time} onChange={handleChange} required />
+                    <input type="date" id="date" name="appointmentDate" value={formData.date} onChange={handleChange} required />
+                    <input type="time" id="time" name="appointmentTime" value={formData.time} onChange={handleChange} required />
                 </div>
                 <div className="input-container">
                     <label htmlFor="email">Email:</label>

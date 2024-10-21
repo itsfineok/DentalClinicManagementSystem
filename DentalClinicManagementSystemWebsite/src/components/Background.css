@@ -1,4 +1,4 @@
-#about-us, #services, #reviews {
+#about-us{
     height: 60vh;
     width: 100%;
     display: grid;
@@ -6,13 +6,14 @@
     color: var(--blue-46);
 }
 
+#about-us {
+    background:  linear-gradient( 180deg, #E0ECFF 0%, white 100%);
+}
 
-
-#about-us, #reviews {
+#reviews {
     background:  linear-gradient( 180deg, var(--blue-d4) 0%, white 100%);
 }
 
 #services {
     background:  linear-gradient( 180deg, white 0%, var(--blue-d4) 100%);
-
 }

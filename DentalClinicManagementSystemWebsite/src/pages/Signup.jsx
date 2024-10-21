@@ -1,18 +1,18 @@
 import Nav from '../components/Nav.jsx';
-import LoginForm from '../components/LoginForm.jsx';
+import SignupForm from '../components/SignupForm.jsx';
 import Footer from '../components/Footer.jsx';
 import '../components/nav-simplify.css'
 
-function Login() {
+function Signup() {
     return (
-        <>  
+        <>
             <div className="nav-trimmer">
                 <Nav/>
             </div>
-            <LoginForm/>
+            <SignupForm/>
             <Footer />
         </>
     );
 }
 
-export default Login;
+export default Signup;

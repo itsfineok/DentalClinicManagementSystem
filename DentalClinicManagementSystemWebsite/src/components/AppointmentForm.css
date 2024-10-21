@@ -2,22 +2,25 @@ main {
     background-color: white;
     margin-inline: 10%;
     padding: 40px;
-    margin-block: 40px;
+    margin-bottom: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border-radius: 20px;
 }
 
 #appointmentForm input[type="text"],#appointmentForm textarea,#appointmentForm input[type="email"]{
     width: 100%;
     font-size: 14px;
     padding: 0.5em;
-
 }
 
 .booking-name  {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 1em;
 }
 
 .booking-name label{
@@ -28,12 +31,39 @@ label[for="surname"]{
     visibility: hidden;
 }
 
+.visited-before-section{
+    margin-block: 1em;
+}
+
 #additionalMessage {
     resize: none;
+}
+
+.appointment-datetime {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1em;
+}
+
+#dentist {
+    margin-top: 1em;
+    width: 100%;
+    background: none;
+    display: block;
+    border: 1px solid #767676;
+    border-radius: 2px;
+    padding: 0.5em;
 }
 
 .input-container label{
     display: block;
     margin-top: 20px;
+}
+
+.radio-button {
+    display: flex;
+    align-items: center;
+    gap: 1em;
 }
 

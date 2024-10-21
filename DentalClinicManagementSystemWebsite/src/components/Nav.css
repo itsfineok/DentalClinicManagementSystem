@@ -1,5 +1,6 @@
 header {
     position: sticky;
+    z-index:1000;
     top: 0;
     display: flex;
     justify-content: space-between;
@@ -33,15 +34,39 @@ nav ul li {
     flex: 1;
     font-size: 15px;
     white-space: nowrap;
-    filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.2));
+    filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.2));
     cursor: pointer;
+    display: inline-block;
+    position: relative;
 }
 
+nav > ul > li:not(:last-child)::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.25s ease-out;
+}
+
+nav > ul > li:not(:last-child):hover::after {
+    transform: scaleX(1);
+}
 
 .get-started-button {
     background-color: var(--blue-59);
     padding-block: 10px;
     padding-inline: 10px;    
+}
+
+.sign-out-button {
+    background-color: #E86969;
+    padding-block: 10px;
+    padding-inline: 10px;  
 }
 
 .hamburger-menu {
@@ -55,14 +80,6 @@ nav ul li {
         justify-content: space-between;
     }
     
-    nav ul {
-        display: none;
-    }
-
-    .get-started-button {
-        display: none;
-    }
-
     .hamburger-menu {
         height: 32px;   
         display: block;
@@ -74,5 +91,35 @@ nav ul li {
     .hamburger-menu img {
         height: 32px;
         color: var(--blue-59);
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Initially hidden outside the screen */
+        width: 250px; /* Width of the menu */
+        height: 100vh;
+        background-color: rgba(167, 206, 253, 0.6);
+        box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.3);
+        transition: right 0.3s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-menu ul {
+        flex-direction: column; /* Stack items vertically */
+        list-style: none;
+        text-align: center;
+        padding: 0;
+    }
+
+    .nav-menu.open {
+        right: 0; /* Bring the menu into view when open */
+    }
+
+    .nav-menu ul li{
+        margin: 20px 0;
+        font-size: 18px;
     }
   }

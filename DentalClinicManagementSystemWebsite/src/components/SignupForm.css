@@ -1,0 +1,98 @@
+.otp-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    background-color: var(--blue-d4);
+    padding-block: 3em;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.otp-popup form {
+    display: flex;
+    row-gap: 2em;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-inline: 1em;
+    font-size: 24px;
+}
+
+.otp-popup form input {
+    padding-inline: 1em;
+    padding-block: 0.5em;
+    text-align: center;
+}
+
+.otp-popup form button {
+    background-color: var(--blue-59);
+    padding: 0.5em;
+}
+
+.signup-form {
+    height: calc(100vh - 74px);
+}
+
+.signup-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.signup-form label {
+    display: block;
+}
+
+.signup-form input {
+    padding: 0.5em;
+}
+
+.signup-form label[for="surname"] {
+    display: block !important;
+    visibility: visible;
+}
+
+.signup-name {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    column-gap: 1em;
+}
+
+.signup-form button {
+    width: 100%;
+}
+
+img[alt="Loading..."] {
+    width: 40px;
+    height: 40px;
+}
+
+main>p>a {
+    cursor: pointer;
+    color: var(--blue-59);
+}
+
+@media (max-width: 600px) {
+    .signup-name {
+        grid-template-columns: 1fr;
+        /* Switch to one-column layout */
+        grid-template-rows: auto;
+    }
+
+    .signup-name label {
+        grid-column: 1 / span 1;
+        /* Each label takes one full row */
+    }
+
+    .signup-name input {
+        grid-column: 1 / span 1;
+        /* Each input follows directly under its label */
+    }
+}

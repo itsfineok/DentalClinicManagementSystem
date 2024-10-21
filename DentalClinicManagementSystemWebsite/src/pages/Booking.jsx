@@ -7,8 +7,10 @@ import Nav from '../components/Nav.jsx';
 function Booking() {
 
   return (
-    <>
-        <Nav/>
+    <>  
+        <div className='nav-trimmer'>
+            <Nav/>
+        </div>
         <AppointmentForm/>
         <Footer/>
     </>

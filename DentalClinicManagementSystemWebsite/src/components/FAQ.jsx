@@ -1,9 +1,6 @@
 import './FAQ.css';
 import tooth from '../assets/icon-tooth.png';
 
-
-import React from 'react';
-
 const placeholderText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "
 
 const faqData = [
@@ -51,7 +48,7 @@ function FAQ() {
             <div className="question-form">
                 <div>
                     <h3>Still have questions?</h3>
-                    <p>Can't find the answer you're looking for? Please chat to our team.</p>
+                    <p>Can&apos;t find the answer you&apos;re looking for? Please chat to our team.</p>
                 </div>
                 <textarea name="" id="" cols="30" rows="1" placeholder="Write something here..."></textarea>
                 <button>Get in touch</button>
